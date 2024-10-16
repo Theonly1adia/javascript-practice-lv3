@@ -20,13 +20,26 @@ function WelcomeMessage(props) {
     <div className="p-4 m-2 border-2 border-slate">
       <h2 className="text-lg">Welcome Message</h2>
       <p>{`Welcome, ${props.name}!`}</p>
+      <p>{`Your favorite color is ${props.color}.`}</p>
+      
     </div>
   );
 }
 
+
+
 // TODO: Add your own component that uses props to display dynamic data
-// Example component: UserInfo
-// Pass props such as "name" and "age" to the component and display them.
+function UserInfo(props) {
+  return (
+    <div className="p-4 m-2 border-2 border-slate">
+      <h2 className="text-lg">User Info</h2>
+      <p>{`Name: ${props.name}`</p>
+      <p>{`Age: ${props.age}`</p>
+    </div>
+  );
+}
+
+/* Pass props such as "name" and "age" to the component and display them. */
 
 function PropsDemo() {
   return (
@@ -34,19 +47,25 @@ function PropsDemo() {
       <h1 className="text-2xl">Props Demo</h1>
 
       <div>
-        <WelcomeMessage name="Alice" />
-        <WelcomeMessage name="Bob" />
-        <WelcomeMessage name="Carol" />
-        TODO: Add a welcome message for Derek, Emily, and Frank using the WelcomeMessage component and a prop.
+        <WelcomeMessage name="Alice" color="blue"/>
+        <WelcomeMessage name="Bob" color="red"/>
+        <WelcomeMessage name="Carol" color="yellow"/>
+        <WelcomeMessage name="Derek" color="green"/>
+        <WelcomeMessage name="Emily" color="black"/>
+        <WelcomeMessage name="Frank" color="white"/>
+        <UserInfo name="John Doe" age={30} />
 
       </div>
       <div>
         TODO: Add your own component here demonstrating the use of props.
+        
       </div>
 
     </div>
   );
 }
+
+
 
 // TASK 2: Use the ternary operator to display different content
 
@@ -69,7 +88,14 @@ function CoinFlip(props) {
 }
 
 // TODO: Create your own component that uses the ternary operator
-// Example component: Weather
+function Weather(props) {
+  const weatherMessage = props.temperature >85 ? "It's hot outside!" : "It's cool outside!";
+  return (
+    <div className="p-4 m-2 border-2 border-slate">
+      <p>{weatherMessage}</p>
+    </div>
+  );
+}
 // Use the ternary operator to display a message based on the props passed (e.g., "temperature").
 
 function TertiaryDemo() {
@@ -82,7 +108,8 @@ function TertiaryDemo() {
         <CoinFlip coinSide="tails" />
       </div>
       <div className="flex justify-around">
-        {/* TODO: Add your own component here */}
+        <Weather temperature={80}/>
+        <Weather temperature={60} />
       </div>
 
     </div>
@@ -111,6 +138,19 @@ function FruitStore() {
 
 // TODO: Create your own component using array destructuring
 
+function VehicleInfo() {
+  const vehicle = ["Toyota", "Camry", 2020];
+  const [make, model, year] = vehicle;
+
+  return (
+    <div className="p-4 m-2 border-2 border-slate">
+      <h2 className="text-lg">Vehicle Info</h2>
+      <p>{`Make: ${make}`}</p>
+      <p>{`Model: ${model}`}</p>
+      <p>{`Year: ${year}`}</p>
+    </div>
+  );
+}
 function ArrayDestructureDemo() {
   return (
     <div className="border-2 border-black rounded size-100">
@@ -120,7 +160,7 @@ function ArrayDestructureDemo() {
         <FruitStore />
       </div>
       <div>
-        TODO: Add your own component here to demonstrate array destructuring.
+      <VehicleInfo/>
       </div>
 
     </div>
@@ -132,9 +172,9 @@ function App() {
   return (
     <div>
       <PropsDemo />
-      <hr class="border-blue-500 m-8"/>
+      <hr className="border-blue-500 m-8"/>
       <TertiaryDemo />
-      <hr class="border-blue-500 m-8"/>
+      <hr className="border-blue-500 m-8"/>
       <ArrayDestructureDemo />
     </div>
   );

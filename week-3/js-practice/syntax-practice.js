@@ -25,13 +25,12 @@ console.log(checkPositiveOrNegative(-5));  // Expected output: "Negative"
 // Return "Empty String" if the string length is 0, otherwise return "Non-empty String".
 
 function checkEmptyString(str) {
-  // TODO: Write your solution here
-
+  return string >=0 ? "Empty String" : "Non-empty String";
 }
 
 // Example usage
-// console.log(checkEmptyString(""));     // Expected output: "Empty String"
-// console.log(checkEmptyString("Hello")); // Expected output: "Non-empty String"
+ console.log(checkEmptyString(""));     // Expected output: "Empty String"
+ console.log(checkEmptyString("Hello")); // Expected output: "Non-empty String"
 
 // TASK 1: Ternary Operator Exercise 2
 // TODO: Use the ternary operator to check if a number is divisible by 5.
@@ -51,6 +50,7 @@ function checkDivisibleByFive(number) {
 // Example: Destructure an array of three cities and log the first two cities.
 const cities = ["New York", "London", "Tokyo"];
 const [city1, city2] = cities;
+
 
 console.log("\nTask 2 Example: Array Destructuring (Cities)");
 console.log(`First City: ${city1}, Second City: ${city2}`);  // Expected output: "First City: New York, Second City: London"
