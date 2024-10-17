@@ -33,8 +33,8 @@ function UserInfo(props) {
   return (
     <div className="p-4 m-2 border-2 border-slate">
       <h2 className="text-lg">User Info</h2>
-      <p>{`Name: ${props.name}`</p>
-      <p>{`Age: ${props.age}`</p>
+      <p>Name: {props.name}</p>
+      <p>Age: {props.age}</p>
     </div>
   );
 }
@@ -145,9 +145,9 @@ function VehicleInfo() {
   return (
     <div className="p-4 m-2 border-2 border-slate">
       <h2 className="text-lg">Vehicle Info</h2>
-      <p>{`Make: ${make}`}</p>
-      <p>{`Model: ${model}`}</p>
-      <p>{`Year: ${year}`}</p>
+      <p>Make: {make}</p>
+      <p>Model: {model}</p>
+      <p>Year: {year}</p>
     </div>
   );
 }
