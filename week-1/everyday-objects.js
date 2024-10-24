@@ -21,6 +21,22 @@ class Car {
 
 // TODO: Create and test other instances for Phone, Book, Laptop, and Backpack...
 // Class: Phone
+
+class Phone {
+  constructor(brand, model, batteryLife) {
+    this.brand = brand;
+    this.model = model;
+    this.batteryLife = batteryLife;
+  }
+
+  makeCall(number) {
+    return `Calling ${number} from ${this.brand} ${this.model} is now running.`;
+  }
+
+  startEngine() {
+    console.log(`The engine of ${this.make} ${this.model} is now running.`);
+  }
+}
 // Properties: brand, model, batteryLife
 // Methods:
 // makeCall(number): Logs "Calling [number] from [brand] [model]."
